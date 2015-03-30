@@ -1,0 +1,19 @@
+!!!
+/[if IE 9] <html class="ie9" lang="en">
+<!--[if gt IE 9]><!-->
+%html{:lang => "en"}<>
+	<!--<![endif]-->
+
+	= Haml::Engine.new(File.read("dev/haml/partials/_doc_head.haml")).render
+
+	%body
+
+		%main{:role => "main"}
+
+			%section
+
+				%article
+
+					%img{:src => "assets/img/comingsoon.png", :alt => "Ottawa Fringe Coming Soon!"}
+
+		= Haml::Engine.new(File.read("dev/haml/partials/_js_analytics.haml")).render
